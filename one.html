@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script>
+    var arr = [];
+    localStorage.clear();
+      function submit() {
+        var a = document.getElementById("personName").value;
+        var b = document.getElementById("adjA").value;
+        var c = document.getElementById("place").value;
+        var d = document.getElementById("adjB").value;
+        var e = document.getElementById("verb").value;
+        var f = document.getElementById("sound").value;
+        
+        localStorage.setItem("keya", a);
+        localStorage.setItem("keyb", b);
+        localStorage.setItem("keyc", c);
+        localStorage.setItem("keyd", d);
+        localStorage.setItem("keye", e);
+        localStorage.setItem("keyf", f);
+        
+        location.href = "two.html";
+      }
+      
+      function add() {
+        var x = document.getElementById("list").value;
+        arr.push(x);
+        document.getElementById("show").innerHTML = "Inputted: " + arr;
+        document.getElementById("list").value = "";
+      }
+      
+      function cont() {
+        localStorage.setItem("lar", arr);
+        location.href = "three.html"
+      }
+    </script>
+  </head>
+  <body>
+    <h1>A person walked into a bar...</h1>
+    <input type="text" id="personName"><span>Person Name</span><br>
+    <input type="text" id="adjA"><span>Adjective</span><br>
+    <input type="text" id="place"><span>A Place</span><br>
+    <input type="text" id="adjB"><span>Adjective</span><br>
+    <input type="text" id="verb"><span>An Action with -ed</span><br>
+    <input type="text" id="sound"><span>A Sound</span><br>
+    <button onclick="submit()">Submit Text To MadLib One</button><br><br>
+    
+    <h1>For Other Page</h1>
+    <input type="text" id="list"><button onclick = "add()">Add</button><br>
+    <span id="show">Inputted:</span><br>
+    <button onclick="cont()">Go to Page Three</button>
+  </body>
+</html>

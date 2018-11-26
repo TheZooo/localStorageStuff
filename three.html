@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script>
+      function start() {
+        var x = localStorage.getItem("lar");
+        document.getElementById("dis").innerHTML = x;
+      }
+      
+      function goBack() {
+        location.href = "one.html";
+        localStorage.clear();
+      }
+    </script>
+  </head>
+  <body onload="start()">
+    <h1>Page 3</h1>
+    <p>Your Array should be down here</p>
+    <p id="dis"></p>
+    <button onclick="goBack()">Go Back</button>
+  </body>
+</html>

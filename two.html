@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script>
+      function start() {
+        var a = localStorage.getItem("keya")
+        var b = localStorage.getItem("keyb")
+        var c = localStorage.getItem("keyc")
+        var d = localStorage.getItem("keyd")
+        var e = localStorage.getItem("keye")
+        var f = localStorage.getItem("keyf")
+        document.getElementById("show").innerHTML =
+        "A person named " + a + " walked into " + b + " " + c + ", a local bar. Until a " + d + " guy walked in and " + e + " a bottle with a " + f + "!";
+      }
+      
+      function goBack() {
+        location.href = "one.html";
+        localStorage.clear();
+      }
+      
+    </script>
+  </head>
+  <body onload="start()">
+    <h1>Result</h1>
+    <span id="show"></span><br>
+    <button onclick="goBack()">Go Back</button>
+    
+  </body>
+</html>
