@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script>
+      localStorage.clear();
+      var d = document;
+      
+      function subm() {
+        var x = d.getElementById('x').value;
+        localStorage.setItem("nam", x);
+        location.href = "experiObjB.html";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>What is the name of product?</h1>
+    <input type="text" id="x"><button onclick="subm()">Submit</button>
+  </body>
+</html>

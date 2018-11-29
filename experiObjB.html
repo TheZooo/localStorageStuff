@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script>
+      var d = document;
+      
+      function subm() {
+        var x = d.getElementById('x').value;
+        localStorage.setItem("pric", x);
+        location.href = "experiObjC.html";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>What is the price of product?</h1>
+    <input type="number" min="0" max="100000" id="x"><button onclick="subm()">Submit</button>
+  </body>
+</html>

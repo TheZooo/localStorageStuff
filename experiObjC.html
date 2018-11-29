@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script>
+      var d = document;
+      var stuf = {};
+      
+      function start() {
+        var x = localStorage.getItem("nam");
+        var y = localStorage.getItem("pric");
+        stuf["name"] = x;
+        stuf["price"] = y;
+        d.getElementById("dis").innerHTML = stuf.name + " costs $" + stuf.price;
+        localStorage.clear();
+      }
+      function back() {
+        location.href = "experiObj.html";
+      }
+    </script>
+  </head>
+  <body onload="start()">
+    <h1>Your Input</h1>
+    <p id="dis"></p>
+    <button onclick="back()">Go Back to First Page</button>
+  </body>
+</html>
